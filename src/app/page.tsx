@@ -1,9 +1,10 @@
+import Link from "next/link";
 export default function home(){
   return (
-    <div id="app">
+    <>
       <h1>Hello World!</h1>
-      <a href="/login"><button>Login Now</button></a>
-      <a href="/login/invigilator"><button>initiate now</button></a>
-    </div>
+      <Link href={"/login"}><button>Login Now</button></Link>
+      <Link href={"/login/invigilator"}><button>Initiate now</button></Link>
+    </>
 );
 }

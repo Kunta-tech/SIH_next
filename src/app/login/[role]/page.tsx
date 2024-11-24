@@ -1,16 +1,15 @@
 'use client'
-import React from 'react';
+import {use} from 'react';
 import { useRouter } from 'next/navigation'
+// import Login from "../../../components/login.js"
 
-function roleLoginPage({
+function RoleLoginPage({
   params,
 } : {
   params: Promise<{ role: string }>,
 }) {
-  const resolvedParams = React.use(params); // Unwrap the Promise
+  const resolvedParams = use(params); // Unwrap the Promise
   const router = useRouter();
-
-  console.log(resolvedParams.role);
   let redir = '';
   if( resolvedParams.role === 'invigilator' ){
     redir = 'invigilator';
@@ -32,4 +31,4 @@ function roleLoginPage({
   );
 };
 
-export default roleLoginPage;
+export default RoleLoginPage;
